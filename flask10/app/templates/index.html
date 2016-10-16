@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% import '_macro.html' as ui %}
+{% from 'bootstrap/pagination.html' import render_pagination %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block page_body %}
+    <div class="container">
+        {% for post in posts %}
+            <div class="container">
+                <h3 style="text-decoration:underline"><a href="{{ url_for('main.posts', id=post.id) }}">{{ post.title }}</a></h3>
+                <div>{{ post.body_html | safe }}</div>
+            </div>
+{#            <li style="width: 80% ">#}
+{#                <div>#}
+{#                    <h3><a href="{{ url_for('main.posts', id=post.id) }}">{{ post.title }}</a></h3>#}
+{#                </div>#}
+{#                <div><span>{{ post.author.name }}</span></div>#}
+{#            </li>#}
+        {% endfor %}
+        {% if pagination %}
+            {{ render_pagination(pagination) }}
+        {% endif %}
+    </div>
+{% endblock page_body %}
+
+{% block footer %}
+    <hr>
+    {{ super() }}
+{% endblock footer %}

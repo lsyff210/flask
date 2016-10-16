@@ -1,0 +1,159 @@
+# Translations template for PROJECT.
+# Copyright (C) 2016 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2016-08-22 21:28+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: __init__.py:50 templates/includes/_navbar.html:14
+msgid "Flask入门"
+msgstr ""
+
+#: __init__.py:50 templates/includes/_navbar.html:20
+msgid "主页"
+msgstr ""
+
+#: __init__.py:51 __init__.py:53
+msgid "模板"
+msgstr ""
+
+#: __init__.py:52
+msgid "小测试"
+msgstr ""
+
+#: __init__.py:54 author/views.py:20 templates/includes/_navbar.html:32
+msgid "登录"
+msgstr ""
+
+#: __init__.py:55 author/views.py:41 templates/includes/_navbar.html:33
+msgid "注册"
+msgstr ""
+
+#: __init__.py:56
+msgid "上传"
+msgstr ""
+
+#: __init__.py:57
+msgid "cookie"
+msgstr ""
+
+#: author/forms.py:8 author/forms.py:15
+msgid "用户名"
+msgstr ""
+
+#: author/forms.py:9 author/forms.py:18 author/forms.py:19
+msgid "密码"
+msgstr ""
+
+#: author/forms.py:10
+msgid "提交"
+msgstr ""
+
+#: author/forms.py:14
+msgid "邮箱"
+msgstr ""
+
+#: author/forms.py:14
+msgid "邮箱不能为空"
+msgstr ""
+
+#: author/forms.py:14
+msgid "请输入正确的邮箱地址"
+msgstr ""
+
+#: author/forms.py:17
+msgid "用户名必须由字母数、字数、下划线或 . 组成"
+msgstr ""
+
+#: author/forms.py:18
+msgid "两次输入的密码必须一致"
+msgstr ""
+
+#: author/forms.py:20
+msgid "马上注册"
+msgstr ""
+
+#: author/views.py:13
+msgid "登录成功"
+msgstr ""
+
+#: main/forms.py:9
+msgid "标题"
+msgstr ""
+
+#: main/forms.py:10
+msgid "正文"
+msgstr ""
+
+#: main/forms.py:11 main/forms.py:16
+msgid "发表"
+msgstr ""
+
+#: main/forms.py:15 templates/posts/detail.html:16
+msgid "评论"
+msgstr ""
+
+#: main/views.py:26
+msgid "flask博客世界"
+msgstr ""
+
+#: main/views.py:167
+msgid "添加新文章"
+msgstr ""
+
+#: main/views.py:169
+msgid "编辑文章"
+msgstr ""
+
+#: templates/404.html:5 templates/404.html:8
+msgid "404错误"
+msgstr ""
+
+#: templates/404.html:9
+msgid "你要的页面并不存在"
+msgstr ""
+
+#: templates/includes/_navbar.html:23
+msgid "关于"
+msgstr ""
+
+#: templates/includes/_navbar.html:29
+msgid "退出"
+msgstr ""
+
+#: templates/includes/_navbar.html:30
+msgid "写博客"
+msgstr ""
+
+#: templates/posts/detail.html:7
+msgid "作者"
+msgstr ""
+
+#: templates/posts/detail.html:7
+msgid "发表日期"
+msgstr ""
+
+#: templates/posts/edit.html:14
+msgid "请输入标题"
+msgstr ""
+
+#: templates/posts/edit.html:17
+msgid "#正文 支持markdown语法"
+msgstr ""
+
+#: templates/posts/edit1.html:15
+msgid "请输入文章标题"
+msgstr ""
+

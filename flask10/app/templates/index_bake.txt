@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% import '_macro.html' as ui %}
+
+{% block title %}{{ title }}{% endblock title %}
+{% block content %}
+    {% set links=[
+    {'label':'base', 'href':url_for('.base')},
+    {'label':'index', 'href':url_for('.index')},
+    {'label':'home1', 'href':url_for('.home')},
+    {'label':'project', 'href':url_for('.project')},
+    {'label':'login', 'href':url_for('.login')},
+    {'label':'upload', 'href':url_for('.upload')},
+    {'label':'cookie', 'href':url_for('.cookie')}
+    ]%}
+
+    {% for link in links %}
+        {%if loop.index !=1 %}|{% endif %}
+        <a href="{{ link.href }}">{{ link.label }}</a>
+{#        {% if link is current_link %}#}
+{#            <a href="{{ link.href }}">#{{ link.label }}</a>#}
+{#        {% else %}#}
+{#            <a href="{{ link.href }}">{{ link.label }}</a>#}
+{#        {% endif %}#}
+    {% endfor %}
+
+    <h1>{{ self.title() }}</h1>
+
+    {{ ui.input('username') }}
+    {{ ui.input('password', type='password') }}
+
+{% endblock content %}
+
+{% block footer %}
+    <hr>
+    {{ super() }}
+{% endblock footer %}

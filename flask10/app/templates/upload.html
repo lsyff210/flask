@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <form action="" method="post" enctype="multipart/form-data">
+    <!--enctype="multipart/form-data" 上传文件时编码所用 -->
+        <input type="file" name="file">
+        <input type="submit" value="upload">
+        </form>
+    </div>
+{% endblock %}
