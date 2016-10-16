@@ -1,0 +1,68 @@
+{% extends 'bootstrap/base.html' %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block head %}
+    {% block metas %}
+        <meta charset="UTF-8">
+    {% endblock %}
+
+    {% block styles %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/jquerysctipttop.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+    {% endblock styles%}
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    {{ super() }}
+{% endblock head %}
+
+
+
+{% block body %}
+
+    {% block navbar %}
+        {% include['includes/_navbar.html',] %}
+    {% endblock %}
+
+    {% block content %}
+        {% block header %}
+            <header>
+                <div class="page-header">
+                    <div class="container">
+                        <h1>{{ title }}</h1>
+                    </div>
+                </div>
+            </header>
+        {% endblock %}
+
+        {% block page_body %}
+        {% endblock %}
+    {% endblock %}
+
+    {% block scripts %}
+        <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/todo.js') }}"></script>
+    {% endblock scripts %}
+
+    <div >
+        {% block footer %}
+            <footer style="bottom:0px;position: fixed;">
+                copyright 2016 by <a href="">jll</a>
+            </footer>
+        {% endblock %}
+    </div>
+
+{% endblock body %}
+
+
+
+
+
+
+
+
+

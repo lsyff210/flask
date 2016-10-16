@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% from 'bootstrap/pagination.html' import render_pagination %}
+
+{% block header %}
+    <div class="page-header">
+    <div class="container">
+        <form role="form" id="main_input_box" method="post">
+            <label class="label_addlist">
+                {{ thing_form.csrf_token() }}
+                {{ thing_form.thing(class="form-control", id="custom_textbox",placeholder=_("what are you to do?")) }}
+                {{ thing_form.submit(class="btn btn-primary add_button") }}
+            </label>
+        </form>
+    </div>
+    </div>
+{% endblock %}
+
+
+{% block page_body %}
+<div class="container" id="main">
+
+    <h2>{{ title }}</h2>
+<ol class="list-group list_of_items">
+{% block status %}
+    {% for things in todolist %}
+        {% if things.status_id == 1 %}
+<li class="list-group-item">
+	<div class="text_holder" >
+		<p class="p1">{{ things.thing }}</p>
+        <form action="{{ url_for('main.edit') }}" style="display: none; float: left" class="in_form" method="post">
+            {{ edit_form.csrf_token() }}
+            {{ edit_form.thing(style="float: left", class="li_input", value=things.thing) }}
+            {{ edit_form.id(class="li_input1", style="display: none", value=things.id) }}
+            {{ edit_form.submit(class="in_button") }}
+        </form>
+		<div class="btn-group pull-right">
+            <form action="{{ url_for('main.delete') }}" class="p_form" method="post">
+                {{ delete_form.csrf_token() }}
+                {{ delete_form.delete_id(class="p_input", style="display: none", value=things.id) }}
+                {{ delete_form.submit(class="delete btn btn-warning") }}
+            </form>
+			<button class="edit btn btn-success">Edit</button>
+		</div>
+	</div>
+	<div class="checkbox" >
+        <form action="{{ url_for('main.complete') }}" method="post" style="display: none">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" >
+            <input type="text" class="check_input" name="check_input" value={{ things.status_id }}>
+            <input type="text" class="check_thing" name="check_thing" value={{ things.id }}>
+            <button type="submit" class="check_button">sure</button>
+        </form>
+		<label><input type="checkbox" id="pull-right" class="pull-right" ></label>
+	</div>
+</li>
+        {% endif %}
+    {% endfor %}
+{% endblock status %}
+    {% if pagination %}
+        {{ render_pagination(pagination) }}
+    {% endif %}
+</ol>
+</div>
+{% endblock page_body %}

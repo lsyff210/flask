@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ToDoList</title>
+</head>
+
+<body>
+</body>
+<script type='text/javascript'>
+
+{#每次提交完成都跳转到 todo.html    #}
+    window.location.href = "{{ url_for('main.todo', id=current_user.id) }}"
+</script>
+</html>

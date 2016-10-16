@@ -1,0 +1,5 @@
+- 确定数据，建立数据库：用户角色表（role），用户表（user），事情状态表（state），具体事情表（thing）
+- 用户登录和注册:建立注册和登录表单，register,login，logout视图函数，并建立相关模板页面，
+- 待做事项和完成事项：（ 建立只有用户登录的状态下才能操作 @login_required）
+建立to do视图函数，并通过current_user.id筛选当前用户的事项，映射到模板，建立edit，delete，complete，update（更新事务状态，复选框使用）函数，利用隐藏表单进行数据操作
+依据todo建立completed事务状态不一样
